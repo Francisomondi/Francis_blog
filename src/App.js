@@ -1,5 +1,5 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   const title = "this is going to be our heading";
@@ -11,13 +11,8 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="content">
-        <h1>{title}</h1>
-
-        <p>this is going to be the parrent page</p>
-        <h4>Liked {like} times</h4>
-        <h4>
-          written by <a href={link}>{person.name}</a>
-        </h4>
+        {title}
+        <Home />
       </div>
     </div>
   );
