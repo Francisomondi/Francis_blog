@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   const title = "this is going to be our heading";
@@ -8,8 +9,10 @@ function App() {
     "https://www.youtube.com/watch?v=pnhO8UaCgxg&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=4";
   return (
     <div className="App">
+      <Navbar />
       <div className="content">
         <h1>{title}</h1>
+
         <p>this is going to be the parrent page</p>
         <h4>Liked {like} times</h4>
         <h4>
