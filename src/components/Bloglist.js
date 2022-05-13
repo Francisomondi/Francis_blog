@@ -1,6 +1,6 @@
-const Bloglist = props => {
-  const blogs = props.blogs;
-  console.log(props, blogs);
+import { list } from "postcss";
+
+const Bloglist = ({ blogs }) => {
   return (
     <div className="blog-list">
       {blogs.map(blog => (
