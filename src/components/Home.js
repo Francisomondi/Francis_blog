@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Bloglist from "./Bloglist";
 
 const Home = () => {
@@ -22,6 +22,10 @@ const Home = () => {
       author: "Rodgers KImbepe"
     }
   ]);
+  useEffect(() => {
+    console.log("rerendered");
+    console.log(blogs);
+  });
 
   const handleDelete = id => {
     const newBlogs = blogs.filter(blog => blog.id !== id);
