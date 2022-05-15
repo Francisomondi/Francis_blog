@@ -22,10 +22,12 @@ const Home = () => {
       author: "Rodgers KImbepe"
     }
   ]);
+
+  const [name, setName] = useState("FRANCIS AZIZ");
   useEffect(() => {
-    console.log("rerendered");
-    console.log(blogs);
-  });
+    console.log("re-rendered");
+    console.log(name);
+  }, [name]);
 
   const handleDelete = id => {
     const newBlogs = blogs.filter(blog => blog.id !== id);
@@ -34,6 +36,8 @@ const Home = () => {
   return (
     <div className="home">
       <Bloglist blogs={blogs} title="All blogs" handleDelete={handleDelete} />
+      <button onClick={() => setName("ZengMaster 254 ")}>Change Name</button>
+      <p>{name}</p>
     </div>
   );
 };
