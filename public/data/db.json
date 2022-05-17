@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "My first blog post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "author": "Brian Otieno",
+      "id": "1"
+    },
+    {
+      "title": "Blog about my work Environment",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "author": "Sophia Amina",
+      "id": "2"
+    },
+    {
+      "title": "Food and Nutrition",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "author": "Humphrey Adala",
+      "id": "3 "
+    }
+  ]
+}
