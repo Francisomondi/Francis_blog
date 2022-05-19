@@ -6,7 +6,7 @@ const Home = () => {
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    let timer = setTimeout(() => {
       fetch(" http://localhost:5000/blogs")
         .then(res => {
           return res.json();
@@ -14,8 +14,12 @@ const Home = () => {
         .then(data => {
           setBlogs(data);
           setIsPending(false);
+        })
+        .catch(err => {
+          console.log("there was an error");
         });
     }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
