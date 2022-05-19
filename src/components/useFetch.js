@@ -1,13 +1,14 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-const useFetch = () => {
-  const [blogs, setBlogs] = useState(null);
+const useFetch = url => {
+  const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     let timer = setTimeout(() => {
-      fetch(" http://localhost:5000/blogs")
+      fetch(url)
         .then(res => {
           if (!res.ok) {
             throw Error("could not fetch data from the json file");
@@ -15,7 +16,7 @@ const useFetch = () => {
           return res.json();
         })
         .then(data => {
-          setBlogs(data);
+          setData(data);
           setIsPending(false);
           setError(null);
         })
@@ -25,7 +26,9 @@ const useFetch = () => {
         });
     }, 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [url]);
+
+  return { data, isPending, error };
 };
 
 export default useFetch;
