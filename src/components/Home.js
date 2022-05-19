@@ -4,10 +4,11 @@ import Bloglist from "./Bloglist";
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
   const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     let timer = setTimeout(() => {
-      fetch(" http://localhost:5000/blogsd")
+      fetch(" http://localhost:5000/blogs")
         .then(res => {
           if (!res.ok) {
             throw Error("could not fetch data from the json file");
@@ -17,9 +18,11 @@ const Home = () => {
         .then(data => {
           setBlogs(data);
           setIsPending(false);
+          setError(null);
         })
         .catch(err => {
-          console.log(err.message);
+          setError(err.message);
+          setIsPending(false);
         });
     }, 1000);
     return () => clearTimeout(timer);
@@ -27,6 +30,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      {error && <div>{error}</div>}
       {isPending && <div>app Loading...</div>}
       {blogs && <Bloglist blogs={blogs} title="All blogs" />}
     </div>
