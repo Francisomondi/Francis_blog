@@ -7,8 +7,11 @@ const Home = () => {
 
   useEffect(() => {
     let timer = setTimeout(() => {
-      fetch(" http://localhost:5000/blogs")
+      fetch(" http://localhost:5000/blogsd")
         .then(res => {
+          if (!res.ok) {
+            throw Error("could not fetch data from the json file");
+          }
           return res.json();
         })
         .then(data => {
@@ -16,7 +19,7 @@ const Home = () => {
           setIsPending(false);
         })
         .catch(err => {
-          console.log("there was an error");
+          console.log(err.message);
         });
     }, 1000);
     return () => clearTimeout(timer);
@@ -24,7 +27,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {isPending && <div>Loading...</div>}
+      {isPending && <div>app Loading...</div>}
       {blogs && <Bloglist blogs={blogs} title="All blogs" />}
     </div>
   );
