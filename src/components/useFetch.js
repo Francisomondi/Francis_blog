@@ -7,8 +7,9 @@ const useFetch = url => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortCont = new AbortController();
     let timer = setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then(res => {
           if (!res.ok) {
             throw Error("could not fetch data from the json file");
@@ -25,7 +26,7 @@ const useFetch = url => {
           setIsPending(false);
         });
     }, 1000);
-    return () => clearTimeout(timer);
+    return () => abortCont.abort;
   }, [url]);
 
   return { data, isPending, error };
