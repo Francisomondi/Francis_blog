@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 
 const useFetch = url => {
@@ -8,7 +7,7 @@ const useFetch = url => {
 
   useEffect(() => {
     const abortCont = new AbortController();
-    let timer = setTimeout(() => {
+    setTimeout(() => {
       fetch(url, { signal: abortCont.signal })
         .then(res => {
           if (!res.ok) {
