@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Francis Omondi ");
+  const history = useHistory();
 
-  const handleSubmit = event => {
-    event.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
 
     const blog = { title, author, body };
     fetch("http://localhost:5000/blogs", {
@@ -15,6 +17,7 @@ const Create = () => {
       body: JSON.stringify(blog)
     }).then(() => {
       console.log(blog);
+      history.push("/");
     });
   };
 
