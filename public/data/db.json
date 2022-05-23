@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "title": "My first blog post",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "author": "Brian Otieno",
-      "id": "1"
-    },
-    {
       "title": "Blog about my work Environment",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "author": "Sophia Amina",
@@ -17,114 +11,6 @@
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "author": "Humphrey Adala",
       "id": "3"
-    },
-    {
-      "title": "ar",
-      "author": "Francis Omondi ",
-      "body": "ertr",
-      "id": "VGeEuGG"
-    },
-    {
-      "title": "gssdgf",
-      "author": "Francis Omondi ",
-      "body": "fgsdfsd",
-      "id": "pZzzWoz"
-    },
-    {
-      "title": "dssdf",
-      "author": "Francis Omondi ",
-      "body": "sdfvsd",
-      "id": "v7ZL8dc"
-    },
-    {
-      "title": "sfgsdg",
-      "author": "Francis Omondi ",
-      "body": "fgssd",
-      "id": "Aop5HYL"
-    },
-    {
-      "title": "dd",
-      "author": "Francis Omondi ",
-      "body": "ddd",
-      "id": "bl93bJn"
-    },
-    {
-      "title": "arqe",
-      "author": "Francis Omondi ",
-      "body": "qwrqrw",
-      "id": "8h3Hz2f"
-    },
-    {
-      "title": "sdsgf",
-      "author": "Francis Omondi ",
-      "body": "sdfgfd",
-      "id": "LYp7ImR"
-    },
-    {
-      "title": "wqewwe",
-      "author": "Francis Omondi ",
-      "body": "rtr",
-      "id": "MTWZp3n"
-    },
-    {
-      "title": "ad",
-      "author": "Francis Omondi ",
-      "body": "dgb",
-      "id": "GS9dVMn"
-    },
-    {
-      "title": "dfg",
-      "author": "Francis Omondi ",
-      "body": "gfdg",
-      "id": "yjP0lFt"
-    },
-    {
-      "title": "cxv",
-      "author": "Francis Omondi ",
-      "body": "vsdf",
-      "id": "fMuUiP5"
-    },
-    {
-      "title": "xdfg",
-      "author": "Francis Omondi ",
-      "body": "sdfdg",
-      "id": "jkqaaA1"
-    },
-    {
-      "title": "dfg",
-      "author": "Francis Omondi ",
-      "body": "dfgf",
-      "id": "h8HhLFZ"
-    },
-    {
-      "title": "er",
-      "author": "Francis Omondi ",
-      "body": "rdsgfd",
-      "id": "LKzQHqT"
-    },
-    {
-      "title": "sgsd",
-      "author": "Francis Omondi ",
-      "body": "sg",
-      "id": "cvoDQu4"
-    },
-    {
-      "title": "asdfg",
-      "author": "Francis Omondi ",
-      "body": "asfdgs",
-      "id": "ln5oQMV"
-    },
-    {
-      "title": "ajh",
-      "author": "Francis Omondi ",
-      "body": "dgf",
-      "id": "JKNDMlu"
-    },
-    {
-      "title": ",kghgguk",
-      "author": "Francis Omondi ",
-      "body": ";ljkjhkjl;jk';jl",
-      "id": "qAcoGTR"
     }
   ]
 }
